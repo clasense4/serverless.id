@@ -1,0 +1,34 @@
+languageCode = "en-us"
+title = "Serverless Indonesia"
+baseurl = "https://blog.serverless.id/"
+Copyright = "All rights reserved - 2017"
+canonifyurls = true
+theme = "casper"
+paginate = 10
+#DisqusShortname = "blog-fajri-my-id"
+
+[params]
+  # description = ""
+  cover = "images/cover.jpg"
+  author = "Fajri Abdillah"
+  authorlocation = "Bandung, Indonesia"
+  authorwebsite = "https://fajri.my.id"
+  bio= "A father with 1 awesome wife and 1 awesome son. Have 3 salt water tank (and will be add more). I'm also collecting Hotwheels, small investment for my son."
+  #logo = "images/logo.png"
+  # googleAnalyticsUserID = "UA-63909276-2"
+  # Optional RSS-Link, if not provided it defaults to the standard index.xml
+  # RSSLink = "http://feeds.feedburner.com/..."
+  # githubName = "clasense4"
+  # twitterName = "clasense4"
+  # facebookName = ""
+  # linkedinName = ""
+  # set true if you are not proud of using Hugo (true will hide the footer note "Proudly published with HUGO.....")
+  hideHUGOSupport = false
+  [params.social]
+    twitter = "clasense4"
+
+[[menu.main]]
+  name = "Home"
+  weight = -120
+  identifier = "home"
+  url = "/"
