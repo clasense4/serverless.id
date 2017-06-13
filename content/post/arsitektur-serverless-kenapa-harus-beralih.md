@@ -17,7 +17,9 @@ comments = true
 
 <!--more-->
 
-Betul, istilah ini memang sangat awam bagi para Developer. Lalu apa sebetulnya serverless itu sendiri? Sudah sangat banyak yang membahas mengenai serverless ini, beberapa diantaranya :
+Betul, teknologi serverless, dibelakangnya memang masih ada server, tapi hanya memiliki waktu sekian detik / mili detik, istilah ini memang sangat awam bagi para Developer.
+
+Lalu apa sebetulnya serverless itu sendiri? Sudah sangat banyak yang membahas mengenai serverless ini, beberapa diantaranya :
 
 - [Serverless Architectures](https://martinfowler.com/articles/serverless.html) *(Paling jelas, disertai dengan beberapa perbandingan)*
 - [What *is* Serverless Architecture?](https://medium.com/@PaulDJohnston/what-is-serverless-architecture-43b9ea4babca)
@@ -62,14 +64,14 @@ Umumnya untuk membuat sebuah sistem, mayoritas menggunakan pola seperti ini :
 
 ### Selamat Datang di Dunia Serverless
 
-Dengan merujuk pertanyaan sebelumnya, maka pertanyaan nomor 1 sudah otomatis diselesaikan oleh serverless. Dengan otomatis serverless akan melakukan scaling sejumlah traffic. Berita baiknya, jika menggunakan framework zappa, Kita bisa memanfaatkan fungsi **[async](https://github.com/Miserlou/Zappa#asynchronous-task-execution)**. Mengenai async & zappa akan dibahas dalam post lainnya.
+Dengan merujuk pertanyaan sebelumnya, maka pertanyaan nomor 1 sudah otomatis diselesaikan oleh serverless. Dengan otomatis serverless akan melakukan scaling sejumlah traffic. Berita baiknya, jika menggunakan framework zappa, Kita bisa memanfaatkan fungsi **[async](https://github.com/Miserlou/Zappa#asynchronous-task-execution)**. Mengenai async & zappa akan dibahas dalam post yang berbeda.
 
 Lalu mengenai metode pembayaran untuk arsitektur serverless khususnya [aws lambda](https://aws.amazon.com/lambda/pricing/), yaitu ketika fungsi dijalankan, kita bayar. Kita tidak membayar fungsi yang tidak dijalankan. Jadi kita bisa lebih efisien dalam sisi biaya, dan tidak dipusingkan mengenai manajemen server. Dan ini otomatis menjawab pertanyaan nomor 2.
 
 Service lainnya seperti [auth0](https://auth0.com/) yang memberikan fitur identitas tanpa harus memanage server. Login menggunakan akun social dipermudah dengan service ini, dan bisa juga dikombinasikan dengan aws lambda, [google firebase](https://firebase.google.com/), dll.
 
-Jika kita ingin membuat aplikasi streaming, kita bisa memanfaatkan [aws kinesis firehose](https://aws.amazon.com/kinesis/firehose/) untuk mengirim data ke [S3](https://aws.amazon.com/s3/), atau [aws kinesis stream](https://aws.amazon.com/kinesis/streams/) untuk mengirim data ke RDBMS seperti [AWS RDS](https://aws.amazon.com/rds/) / [Aurora](https://aws.amazon.com/rds/aurora/) dan NoSQL seperti [AWS DynamoDB](https://aws.amazon.com/dynamodb/), [Redis](https://aws.amazon.com/elasticache/).
+Jika kita ingin membuat aplikasi data streaming, kita bisa memanfaatkan service seperti [aws kinesis firehose](https://aws.amazon.com/kinesis/firehose/) untuk mengirim data ke [S3](https://aws.amazon.com/s3/), atau [aws kinesis stream](https://aws.amazon.com/kinesis/streams/) untuk mengirim data ke RDBMS seperti [AWS RDS](https://aws.amazon.com/rds/) / [Aurora](https://aws.amazon.com/rds/aurora/) dan NoSQL seperti [AWS DynamoDB](https://aws.amazon.com/dynamodb/), [Redis](https://aws.amazon.com/elasticache/). Mengenai teknologi streaming akan dibahas dalam post yang berbeda.
 
 ### Kesimpulan
 
->>> Serverless adalah tentang tidak diperlukannya manage server, semua tentang pemanfaatan service
+>>> Serverless adalah tentang tidak diperlukannya manage server, semua tentang pemanfaatan service, kita tidak lagi dipusingkan oleh limitasi server, sehingga proses bisnis berjalan dengan baik berapapun traffic yang datang.
