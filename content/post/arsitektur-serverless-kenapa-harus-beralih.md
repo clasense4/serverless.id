@@ -17,7 +17,16 @@ comments = true
 
 <!--more-->
 
-Betul, istilah ini memang sangat awam bagi para Developer. Umumnya untuk membuat sebuah sistem, mayoritas menggunakan pola seperti ini :
+Betul, istilah ini memang sangat awam bagi para Developer. Lalu apa sebetulnya serverless itu sendiri? Sudah sangat banyak yang membahas mengenai serverless ini, beberapa diantaranya :
+
+- [Serverless Architectures](https://martinfowler.com/articles/serverless.html) *(Paling jelas, disertai dengan beberapa perbandingan)*
+- [What *is* Serverless Architecture?](https://medium.com/@PaulDJohnston/what-is-serverless-architecture-43b9ea4babca)
+- [Answering All Your Questions on Serverless Javascript](https://medium.com/the-node-js-collection/serverless-javascript-5d2528ac46b5)
+- [What’s This Serverless Thing Anyway?](https://read.acloud.guru/whats-this-serverless-thing-anyway-b101cb72c7e6)
+
+### Beri saya alasan untuk beralih
+
+Umumnya untuk membuat sebuah sistem, mayoritas menggunakan pola seperti ini :
 
 1. **Web Server + Aplikasi Server dan Database Server dalam satu server**.
 
@@ -33,7 +42,7 @@ Betul, istilah ini memang sangat awam bagi para Developer. Umumnya untuk membuat
 
 2. **Web Server + Aplikasi Server dan Database Server dalam server yang berbeda dan banyak**.
 
-    Ini langkah yang sangat baik. Ketika traffic meningkat, dan yang membutuhkan penanganan lebih lanjut hanya pada sisi Web Server, Web Server bisa kita upgrade, begitu juga jika server Database membutuhkan penanganan, bisa dilakukan scaling atau menambahkan node untuk replikasi / sharding.
+    Ini langkah yang sangat baik. Ketika traffic meningkat, dan yang membutuhkan penanganan lebih lanjut hanya pada sisi Web Server, Web Server bisa kita upgrade atau tambah node, begitu juga jika server Database membutuhkan penanganan, bisa dilakukan scaling dengan menambahkan node untuk replikasi / sharding.
 
     Deployment jenis ini juga bisa ditangani oleh "Provision Tools" sama seperti diatas. Cukup ketik satu baris perintah di command line kita, tungggu, dan sistem siap digunakan. Atau jika menggunakan service cloud seperti **[AWS Elastic Beanstalk](https://aws.amazon.com/elasticbeanstalk/)** atau **[AWS Opswork](https://aws.amazon.com/opsworks/)**, kita sudah sangat dimudahkan.
 
@@ -41,7 +50,7 @@ Betul, istilah ini memang sangat awam bagi para Developer. Umumnya untuk membuat
 
     >>> Berapa banyak pengunjung yang dibuat kecewa dengan error 500 ini?
 
-    "Kita tambah 1 instance, ketika rata - rata CPU sudah **mencapai 85%**. Dan kurangi 1 instance ketika rata - rata CPU **sudah 25%**". Betul, cara ini bisa melakukan antisipasi awal ketika traffic sudah mulai tinggi. Lalu muncul lagi pertanyaan
+    "Kita tambah 1 instance, ketika rata - rata CPU sudah **mencapai 85% selama 5 menit**. Dan kurangi 1 instance ketika rata - rata CPU **sudah 25% selama 5 menit**". Betul, cara ini bisa melakukan antisipasi awal ketika traffic sudah mulai tinggi. Lalu muncul lagi pertanyaan
 
     >>> 85%? Berarti ada 15% yang kurang dimanfaatkan? Kenapa ngga nunggu 100%?
 
@@ -63,4 +72,4 @@ Jika kita ingin membuat aplikasi streaming, kita bisa memanfaatkan [aws kinesis 
 
 ### Kesimpulan
 
->>> Serverless adalah tentang tidak diperlukannya maintenance server, semua tentang pemanfaatan service
+>>> Serverless adalah tentang tidak diperlukannya manage server, semua tentang pemanfaatan service
