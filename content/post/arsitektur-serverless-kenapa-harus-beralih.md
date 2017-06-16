@@ -48,30 +48,30 @@ Umumnya untuk membuat sebuah sistem, mayoritas menggunakan pola seperti ini :
 
     Deployment jenis ini juga bisa ditangani oleh "Provision Tools" sama seperti diatas. Cukup ketik satu baris perintah di command line kita, tungggu, dan sistem siap digunakan. Atau jika menggunakan service cloud seperti **[AWS Elastic Beanstalk](https://aws.amazon.com/elasticbeanstalk/)** atau **[AWS Opswork](https://aws.amazon.com/opsworks/)**, kita sudah sangat dimudahkan.
 
-    Apakah dengan deployment seperti ini bisa menjawab pertanyaan diatas? Saya pikir ini bisa. Lalu ketika tim melihat halaman monitoring, tampak jelas grafik yang sangat menanjak, dan seketika turun dengan curam. Dan di bagian report **http request 500**, naik sangat tajam. Lalu muncul lagi pertanyaan
+    Apakah dengan deployment seperti ini bisa menjawab pertanyaan diatas? Saya pikir ini bisa. Lalu mengapa masih menawarkan serverless?
 
-    >>> Berapa banyak pengunjung yang dibuat kecewa dengan error 500 ini?
+    Kita tengok sebuah cerita di suatu tim. Pada suatu waktu tim melihat halaman monitoring, tampak jelas grafik yang sangat menanjak, dan seketika turun dengan curam. Dan di bagian report **http request 500**, naik sangat tajam. Lalu muncul pertanyaan
 
-    "Kita tambah 1 instance, ketika rata - rata CPU sudah **mencapai 85% selama 5 menit**. Dan kurangi 1 instance ketika rata - rata CPU **sudah 25% selama 5 menit**". Betul, cara ini bisa melakukan antisipasi awal ketika traffic sudah mulai tinggi. Lalu muncul lagi pertanyaan
+    >>> Server Aplikasi kita ngga kuat, berapa banyak pengunjung yang dibuat kecewa dengan error ini?
 
-    >>> 85%? Berarti ada 15% yang kurang dimanfaatkan? Kenapa ngga nunggu 100%?
+    Lalu dilakukan meeting dan muncullah sebuah formula, "Kita tambah 1 instance, ketika rata - rata CPU sudah **mencapai 85% selama 5 menit**. Dan kurangi 1 instance ketika rata - rata CPU **sudah 25% selama 5 menit**". Dengan cara ini, kita bisa melakukan antisipasi awal ketika traffic sudah mulai tinggi. Lalu muncul lagi pertanyaan
 
-    "Kalau nunggu 100%, takutnya telat, provisioning itu butuh waktu Pak, jadi kita ambil antisipasi di angka 85%, atau kurang dari angka tersebut kalau ingin aman. Kecuali Bapak tidak mempermasalahkan dengan melihat health status mencapai **warning** atau **severe**". Dan inilah bentuk ketidak-pastian dalam industri yang kita jalani. Harus siap ketika traffic tinggi, dan tidak boleh mahal ketika traffic sedang rendah.
+    >>> Berapa waktu yang dibutuhkan untuk menambah instance baru?
 
-    ![ env_by_health.png ](/images/arsitektur-serverless-kenapa-harus-beralih/env_by_health.png "")
-
-    >>> Harga EC2 dengan tipe **[m4.large](https://aws.amazon.com/ec2/pricing/on-demand/)** per jam di region tokyo / **ap-northeast-1** yaitu **$0.129**. Dengan asumsi seperti diatas berarti ada 15% ($0.01935) yang percuma, dikalikan berapa jam pemakaian dan dikalikan berapa instance, apabila menggunakan instance yang lebih tinggi, berapa biaya yang terbuang?
+    ![ autoscaling_aws.png ](/images/arsitektur-serverless-kenapa-harus-beralih/autoscaling_aws.png "")
 
 ### Selamat Datang di Dunia Serverless
 
-Dengan merujuk pertanyaan sebelumnya, maka pertanyaan nomor 1 sudah otomatis diselesaikan oleh serverless. Dengan otomatis serverless akan melakukan scaling sejumlah traffic. Berita baiknya, jika menggunakan framework zappa, Kita bisa memanfaatkan fungsi **[async](https://github.com/Miserlou/Zappa#asynchronous-task-execution)**. Mengenai async & zappa akan dibahas dalam post yang berbeda.
+Dengan merujuk pertanyaan sebelumnya, maka pertanyaan pada point nomor 1 sudah diselesaikan oleh serverless. Dengan otomatis serverless akan melakukan scaling sejumlah traffic. Berita baiknya, jika menggunakan framework zappa, Kita bisa memanfaatkan fungsi **[async](https://github.com/Miserlou/Zappa#asynchronous-task-execution)**. Mengenai async & zappa akan dibahas dalam post yang berbeda.
 
-Lalu mengenai metode pembayaran untuk arsitektur serverless khususnya [aws lambda](https://aws.amazon.com/lambda/pricing/), yaitu ketika fungsi dijalankan, kita bayar. Kita tidak membayar fungsi yang tidak dijalankan. Jadi kita bisa lebih efisien dalam sisi biaya, dan tidak dipusingkan mengenai manajemen server. Dan ini otomatis menjawab pertanyaan nomor 2.
+Lalu mengenai perbandingan antara arsitektur serverless dan arsitektur berbasis server seperti elasticbeanstalk, perbedaan yang sangat jelas yaitu saat proses [autoscaling](http://docs.aws.amazon.com/autoscaling/latest/userguide/GettingStartedTutorial.html) terjadi. Provisioning instance baru, itu dibutuhkan proses, seperti install dependency (contoh : Nginx + PHP-FPM), register ke Elastic Load Balancer, Health Check, dan menerima traffic. Pada arsitektur serverless, tidak ada lagi proses install dependency dan lainnya seperti pada elastic beanstalk. Karena kode kita sudah dibungkus menjadi sebuah fungsi, proses menambah instance dalam arsitektur serverless tersebut berjalan sangat cepat dan otomatis.
 
-Service lainnya seperti [auth0](https://auth0.com/) yang memberikan fitur identitas tanpa harus memanage server. Login menggunakan akun social dipermudah dengan service ini, dan bisa juga dikombinasikan dengan aws lambda, [google firebase](https://firebase.google.com/), dll.
+Dalam dunia serverless, Kita bisa fokus pada bisnis dan kepuasan user. Tidak perlu banyak effort dalam scaling, semua sudah di handle oleh provider.
+
+Dalam dunia serverless, Kita berbicara mengenai pemanfaatan service. Service seperti [auth0](https://auth0.com/) yang memberikan fitur identitas tanpa harus memanage server. Login menggunakan akun social dipermudah dengan service ini.
 
 Jika kita ingin membuat aplikasi data streaming, kita bisa memanfaatkan service seperti [aws kinesis firehose](https://aws.amazon.com/kinesis/firehose/) untuk mengirim data ke [S3](https://aws.amazon.com/s3/), atau [aws kinesis stream](https://aws.amazon.com/kinesis/streams/) untuk mengirim data ke RDBMS seperti [AWS RDS](https://aws.amazon.com/rds/) / [Aurora](https://aws.amazon.com/rds/aurora/) dan NoSQL seperti [AWS DynamoDB](https://aws.amazon.com/dynamodb/), [Redis](https://aws.amazon.com/elasticache/). Mengenai teknologi streaming akan dibahas dalam post yang berbeda.
 
 ### Kesimpulan
 
->>> Serverless adalah tentang tidak diperlukannya manage server, semua tentang pemanfaatan service, kita tidak lagi dipusingkan oleh limitasi server, sehingga proses bisnis berjalan dengan baik berapapun traffic yang datang.
+>>> Serverless adalah tentang tidak diperlukannya manage server, semua tentang pemanfaatan service, Kita tidak lagi dipusingkan oleh limitasi server, sehingga proses bisnis berjalan dengan baik berapapun traffic yang datang.
