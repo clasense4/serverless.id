@@ -5,27 +5,17 @@ Copyright = "All rights reserved - 2017"
 canonifyurls = true
 theme = "casper"
 paginate = 10
-#DisqusShortname = "blog-fajri-my-id"
+DisqusShortname = "blog-serverless-id"
 
 [params]
   # description = ""
   cover = "images/cover.jpg"
-  author = "Fajri Abdillah"
-  authorlocation = "Bandung, Indonesia"
-  authorwebsite = "https://fajri.my.id"
-  bio= "(Software | Data | System) Engineer"
   #logo = "images/logo.png"
-  # googleAnalyticsUserID = "UA-63909276-2"
+  googleAnalyticsUserID = "UA-63909276-4"
   # Optional RSS-Link, if not provided it defaults to the standard index.xml
   # RSSLink = "http://feeds.feedburner.com/..."
-  # githubName = "clasense4"
-  # twitterName = "clasense4"
-  # facebookName = ""
-  # linkedinName = ""
   # set true if you are not proud of using Hugo (true will hide the footer note "Proudly published with HUGO.....")
   hideHUGOSupport = false
-  [params.social]
-    twitter = "clasense4"
 
 [[menu.main]]
   name = "Home"
