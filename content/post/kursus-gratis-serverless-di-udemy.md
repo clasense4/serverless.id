@@ -11,13 +11,13 @@ date = "2017-06-20T02:24:24+07:00"
 comments = true
 +++
 
-##Kursus Gratis Serverless di Udemy
+## Kursus Gratis Serverless di Udemy
 
 Karena *serverless* ini terbilang baru, bahan belajar pun masih terus berkembang untuk menjadi lebih baik dan lebih banyak. Sebagai perkenalan, bila kamu ingin mengetahui bagaimana *serverless* bekerja dan digunakan, kamu dapat mengikuti beberapa kursus gratis berikut yang ada di Udemy.
 
 Di dalam *course* ini banyak hal yang dibahas untuk implementasi suatu arsitektur *serverless* di beberapa *vendor* seperti AWS, Azure, Google Cloud Function, dan lainnya.
 
-###Serverless Concept
+### Serverless Concept
 
 Kursus ini memperkenalkan *serverless* secara umum dengan target berbagai *vendor* seperti AWS, Azure, dan Google Cloud Function. Di dalam kursus ini juga dikenalkan bagaimana kita dapat membangun salah satu aspek *serverless* yang dikenal dengan istilah BaaS menggunakan Parse Server yang di-*hosting* sendiri.
 
@@ -27,7 +27,7 @@ Kursus ini diajarkan oleh Johnny Jelinek, yang merupakan pengajar dari Serverles
 
 Bahan belajar ada sebanyak 14 topik, dan membutuhkan waktu sekitar 2 jam untuk diselesaikan.
 
-###Serverless Architecture on Amazon Web Services
+### Serverless Architecture on Amazon Web Services
 
 Kursus ini dibawakan oleh Mahmoud Matouk, seorang Senior Solution Architect.
 
@@ -37,7 +37,7 @@ Kamu akan mengenal DynamoDB sebagai *data store*, AWS Lambda sebagai *backend se
 
 Bahan belajar ada sebanyak 8 topik, dan membutuhkan waktu sekitar 33 menit untuk diselesaikan.
 
-###Serverless Workflow Management with AWS Step Functions
+### Serverless Workflow Management with AWS Step Functions
 Kursus ini memperkenalkan *serverless* secara umum dengan target berbagai *vendor* seperti AWS, Azure, dan Google Cloud Function. Di dalam kursus ini juga dikenalkan bagaimana kita dapat membangun salah satu aspek *serverless* yang dikenal dengan istilah BaaS menggunakan Parse Server yang di-*hosting* sendiri.
 
 Kamu juga akan belajar bagaimana membuat aplikasi FaaS di AWS Lambda, Azure Function, dan Bluemix OpenWhisk. Selain itu kamu juga akan melihat bagaimana *serverless* bekerja di *production release*.
@@ -46,7 +46,7 @@ Kursus ini diajarkan oleh Johnny Jelinek, yang merupakan pengajar dari Serverles
 
 Bahan belajar ada sebanyak 14 topik, dan membutuhkan waktu sekitar 2 jam untuk diselesaikan.
 
-###Serverless Architecture on Amazon Web Services
+### Serverless Architecture on Amazon Web Services
 
 Kursus ini dibawakan oleh Mahmoud Matouk, seorang Senior Solution Architect.
 
