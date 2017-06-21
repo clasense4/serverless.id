@@ -1,6 +1,6 @@
 +++
 title = "Kursus Gratis Serverless di Udemy"
-author = "Ridwan Bejo"
+author = "ridwanbejo"
 share = true
 tags = ["serverless", "amazon web service", "microsoft azure", "google cloud platform", "openwhisk", "iron io", "parse server", "free course", "udemy", "online course"]
 draft = false
@@ -10,8 +10,6 @@ slug = "kursus-gratis-serverless-di-udemy"
 date = "2017-06-20T02:24:24+07:00"
 comments = true
 +++
-
-## Kursus Gratis Serverless di Udemy
 
 Karena *serverless* ini terbilang baru, bahan belajar pun masih terus berkembang untuk menjadi lebih baik dan lebih banyak. Sebagai perkenalan, bila kamu ingin mengetahui bagaimana *serverless* bekerja dan digunakan, kamu dapat mengikuti beberapa kursus gratis berikut yang ada di Udemy.
 
@@ -25,7 +23,7 @@ Kamu juga akan belajar bagaimana membuat aplikasi FaaS di AWS Lambda, Azure Func
 
 Kursus ini diajarkan oleh Johnny Jelinek, yang merupakan pengajar dari Serverless Academy dan juga oleh Linux and Cloud Training Linux Academy.
 
-Bahan belajar ada sebanyak 14 topik, dan membutuhkan waktu sekitar 2 jam untuk diselesaikan.
+Bahan belajar ada sebanyak 14 topik, dan membutuhkan waktu sekitar 2 jam untuk diselesaikan. Kunjungi tautanya disini [https://www.udemy.com/serverless-concepts](https://www.udemy.com/serverless-concepts)
 
 ### Serverless Architecture on Amazon Web Services
 
@@ -44,7 +42,7 @@ Kamu juga akan belajar bagaimana membuat aplikasi FaaS di AWS Lambda, Azure Func
 
 Kursus ini diajarkan oleh Johnny Jelinek, yang merupakan pengajar dari Serverless Academy dan juga oleh Linux and Cloud Training Linux Academy.
 
-Bahan belajar ada sebanyak 14 topik, dan membutuhkan waktu sekitar 2 jam untuk diselesaikan.
+Bahan belajar ada sebanyak 14 topik, dan membutuhkan waktu sekitar 2 jam untuk diselesaikan. Kunjungi tautannya disini [https://www.udemy.com/serverless-architecture-on-aws](https://www.udemy.com/serverless-architecture-on-aws)
 
 ### Serverless Architecture on Amazon Web Services
 
@@ -52,4 +50,4 @@ Kursus ini dibawakan oleh Mahmoud Matouk, seorang Senior Solution Architect.
 
 Di kursus ini kamu akan diperkenalkan sebuah layanan AWS bernama AWS Step Function. Layanan tersebut berguna untuk mengatur *microservice* yang kamu bangun di AWS dengan menggunakan *workflow* dalam bentuk diagram. Di kursus ini kamu akan melihat bagaimana Lambda *function* dihubungkan ke EC2 untuk menerima *event* dan berperan sebagai *worker*.
 
-Bahan belajar ada sebanyak 7 topik, dan membutuhkan waktu sekitar 1 jam untuk diselesaikan.
+Bahan belajar ada sebanyak 7 topik, dan membutuhkan waktu sekitar 1 jam untuk diselesaikan. Kunjungi tautanya disini [https://www.udemy.com/aws-step-functions/](https://www.udemy.com/aws-step-functions/)
