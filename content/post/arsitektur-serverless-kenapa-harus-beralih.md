@@ -1,6 +1,6 @@
 +++
 title = "Arsitektur Serverless? Kenapa harus beralih?"
-author = "Fajri Abdillah"
+author = "fajriabdillah"
 share = true
 tags = ["serverless"]
 draft = false
@@ -13,9 +13,9 @@ comments = true
 
 >>> Serverless? Tidak ada server? Mana mungkin.
 
-![ impossibru.jpg ](/images/arsitektur-serverless-kenapa-harus-beralih/impossibru.jpg "IMPOSSIBRU")
-
 <!--more-->
+
+![ impossibru.jpg ](/images/arsitektur-serverless-kenapa-harus-beralih/impossibru.jpg "IMPOSSIBRU")
 
 Betul, teknologi serverless, dibelakangnya memang masih ada server, tapi hanya memiliki waktu sekian detik / mili detik, istilah ini memang sangat awam bagi para Developer.
 

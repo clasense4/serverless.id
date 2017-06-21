@@ -1,6 +1,6 @@
 +++
 title = "Mengenal Berbagai Tools untuk Membangun Aplikasi Berarsitektur Serverless"
-author = "Ridwan Bejo"
+author = "ridwanbejo"
 share = true
 tags = ["serverless", "amazon web service", "microsoft azure", "google cloud platform", "openwhisk", "iron io"]
 draft = false
@@ -11,19 +11,17 @@ date = "2017-06-17T02:24:24+07:00"
 comments = true
 +++
 
-#Mengenal Berbagai Tools untuk Membangun Aplikasi Berarsitektur Serverless
-
-##Pendahuluan
+## Pendahuluan
 
 *Serverless* memang masih belum lazim di khalayak IT Indonesia. Namun perlahan tapi pasti, rekan - rekan IT yang sudah mulai banyak menggunakan *virtual private server*, *platform as a service*, dan layanan *cloud* lainnya mungkin akan mulai melirik sesuatu yang dinamakan dengan *serverless architecture* ini.
 
 Memang *vendor* besar yang baru menyediakan masih didominasi oleh Amazon Web Service, Microsoft Azure, dan Google Cloud Platform. Namun walaupun baru tiga yang secara resmi membuka layanan ini, berbagai *tools* untuk membangun aplikasi *serverless* ini sudah bermunculan.
 
-##Berbagai Framework Arsitektur untuk Serverless
+## Berbagai Framework Arsitektur untuk Serverless
 
 Berikut adalah berbagai *tools* untuk memulai pembuatan aplikasi *serverless* dengan bahasa pemrograman yang kamu sukai:
 
-###Azure Function Tool
+### Azure Function Tool
 
 Azure Function Tool adalah peralatan untuk *local development* dalam membuat, menguji, menjalankan, *debugging*, dan *deploy* kode kita ke Azure Function Service.
 
@@ -33,7 +31,7 @@ Azure Function Tool adalah peralatan untuk *local development* dalam membuat, me
 * Sistem Operasi: Windows
 * FaaS Service: Azure Function
 
-###Turtle
+### Turtle
 
 Turtle adalah *toolkit* untuk membangun aplikasi *serverless* yang bersifat *event driven*. Kamu dapat membuat sebuah *function* Node.js yang akan di-*deploy* ke berbagai layanan FaaS.
 
@@ -43,7 +41,7 @@ Turtle adalah *toolkit* untuk membangun aplikasi *serverless* yang bersifat *eve
 * Sistem Operasi: Windows, OSX, Linux, BSD
 * FaaS Service: AWS Lambda, Azure Function, Google Cloud Function
 
-###Lambada
+### Lambada
 
 Lambada dapat membantu kamu membuat REST API berbasis *serverless* dengan menggunakan bahasa Java. Lambada menggunakan JAX-RS API dan dapat men-*deploy* aplikasi kamu secara mudah ke AWS Lambda dan API Gateway
 
@@ -53,7 +51,7 @@ Lambada dapat membantu kamu membuat REST API berbasis *serverless* dengan menggu
 * Sistem Operasi: Windows, OSX, Linux, BSD
 * FaaS Service: AWS Lambda
 
-###Shep
+### Shep
 
 Shep adalah *toolkit* untuk membangun aplikasi *serverless* yang dapat di-*deploy* di AWS API Gateway dan AWS Lambda. Kamu dapat menggunakan Node.js untuk membuat aplikasi *serverless* menggunakan Sheep.
 
@@ -63,7 +61,7 @@ Shep adalah *toolkit* untuk membangun aplikasi *serverless* yang dapat di-*deplo
 * Sistem Operasi: Windows, OSX, Linux, BSD
 * FaaS Service: AWS Lambda
 
-###Sparta
+### Sparta
 
 Sparta adalah *toolkit* untuk membangun aplikasi *serverless* yang dapat di-*deploy* di AWS API Gateway dan AWS Lambda. Kamu dapat menggunakan Go untuk membuat aplikasi *serverless* menggunakan Sparta.
 
@@ -75,7 +73,7 @@ Selain itu kamu juga dapat mengintegrasikan S3 dan SNS sebagai *event source*, d
 * Sistem Operasi: Windows, OSX, Linux, BSD
 * FaaS Service: AWS Lambda
 
-###Python Lambda
+### Python Lambda
 
 Python Lambda adalah *toolkit* untuk membangun aplikasi *serverless* yang dapat di-*deploy* di AWS Lambda menggunakan bahasa pemrograman Python.
 
@@ -85,7 +83,7 @@ Python Lambda adalah *toolkit* untuk membangun aplikasi *serverless* yang dapat 
 * Sistem Operasi: Windows, OSX, Linux, BSD
 * FaaS Service: AWS Lambda
 
-###Deep
+### Deep
 
 Deep adalah *toolkit* untuk membangun aplikasi *serverless* yang dapat di-*deploy* di berbagai Faas Service. Kamu dapat menggunakan Node.js untuk membuat aplikasi *serverless* menggunakan Deep.
 
@@ -95,7 +93,7 @@ Deep adalah *toolkit* untuk membangun aplikasi *serverless* yang dapat di-*deplo
 * Sistem Operasi: Windows, OSX, Linux, BSD
 * FaaS Service: AWS Lambda, Azure Function, Google Cloud Function
 
-###Lambdoku
+### Lambdoku
 
 Lambdoku adalah *toolkit* untuk membangun aplikasi *serverless* yang memberikan pengalaman seperti menggunakan Heroku Toolbet sat menggunakan AWS Lambda.
 
@@ -105,7 +103,7 @@ Lambdoku adalah *toolkit* untuk membangun aplikasi *serverless* yang memberikan 
 * Sistem Operasi: Windows, OSX, Linux, BSD
 * FaaS Service: AWS Lambda
 
-###AWS Lambda Go
+### AWS Lambda Go
 
 AWS Lambda Go adalah *toolkit* untuk membangun aplikasi *serverless* dengan menggunakan Go di AWS Lambda.
 
@@ -116,7 +114,7 @@ AWS Lambda Go adalah *toolkit* untuk membangun aplikasi *serverless* dengan meng
 * FaaS Service: AWS Lambda
 
 
-###Kappa
+### Kappa
 
 Kappa adalah *toolkit* untuk membangun aplikasi *serverless* yang dapat di-*deploy* di berbagai AWS Lambda menggunakan bahasa pemrograman Python. Namun kamu dapat mengintegrasikannya dengan berbagai *event source* seperti Cloudwatch, S3, dan SNS. Kamu juga dapat mengatur IAM Role melalui Kappa.
 
@@ -126,7 +124,7 @@ Kappa adalah *toolkit* untuk membangun aplikasi *serverless* yang dapat di-*depl
 * Sistem Operasi: Windows, OSX, Linux, BSD
 * FaaS Service: AWS Lambda
 
-###Wsk
+### Wsk
 
 Wsk adalah *toolkit* untuk membangun aplikasi *serverless* yang di-*deploy* di Apache OpenWhisk. Sebuah proyek *open source* yang dapat membantu kamu membangun layanan Faas Sendiri. Wsk sudah terintegrasi di dalam proyek Apache OpenWhisk ini.
 
@@ -136,7 +134,7 @@ Wsk adalah *toolkit* untuk membangun aplikasi *serverless* yang di-*deploy* di A
 * Sistem Operasi: Windows, OSX, Linux, BSD
 * FaaS Service: Apache OpenWhisk
 
-###IronFunction
+### IronFunction
 
 Iron Function adalah *toolkit* untuk membangun aplikasi *serverless* yang di-*deploy* di Iron.IO. Sebuah layanan FaaS yang dikenal dengan IronMQ-nya.
 
@@ -146,7 +144,7 @@ Iron Function adalah *toolkit* untuk membangun aplikasi *serverless* yang di-*de
 * Sistem Operasi: Windows, OSX, Linux, BSD
 * FaaS Service: Iron.IO
 
-###Gordon
+### Gordon
 
 Gordon adalah sebuah *toolkit* yang dapat membantu kamu membangun aplikasi *serverless* yang memberikan pilihan bahasa pemrograman cukup banyak. Gordon ditujukan untuk membangun aplikasi *serverless* menggunakan AWS Lambda dan AWS Cloud Formation.
 
@@ -158,7 +156,7 @@ Gordon juga memiliki integrasi dengan API Gateway, Cloudwatch, DynamoDB, Kinesis
 * Sistem Operasi: Windows, OSX, Linux, BSD
 * FaaS Service: AWS Lambda
 
-###Claudia.js
+### Claudia.js
 
 Claudia.js adalah *toolkit* untuk membangun aplikasi *serverless* yang dapat di-*deploy* di AWS Lambda dan API Gateway. Kamu dapat menggunakan Node.js untuk membuat aplikasi *serverless* menggunakan Claudia.js.
 
@@ -168,7 +166,7 @@ Claudia.js adalah *toolkit* untuk membangun aplikasi *serverless* yang dapat di-
 * Sistem Operasi: Windows, OSX, Linux, BSD
 * FaaS Service: AWS Lambda
 
-###AWS Chalice
+### AWS Chalice
 
 Chalice adalah *toolkit* untuk membangun aplikasi *serverless* yang dapat di-*deploy* di AWS Lambda dan API Gateway. Kamu dapat menggunakan Python untuk membuat aplikasi *serverless* menggunakan Chalice.
 
@@ -180,7 +178,7 @@ Chalice ini memiliki *pattern* yang mirip dengan Flask. Salah satu *web framewor
 * Sistem Operasi: Windows, OSX, Linux, BSD
 * FaaS Service: AWS Lambda
 
-###Zappa
+### Zappa
 
 Zappa adalah *toolkit* untuk membangun aplikasi *serverless* yang dapat di-*deploy* di AWS Lambda dan API Gateway. Kamu dapat menggunakan Python untuk membuat aplikasi *serverless* menggunakan Zappa.
 
@@ -194,7 +192,7 @@ Uniknya, Zappa ini dapat membantu kamu menulis sebuah *service* yang ditulis men
 * Sistem Operasi: Windows, OSX, Linux, BSD
 * FaaS Service: AWS Lambda
 
-###Apex
+### Apex
 
 Apex adalah *toolkit* untuk membangun aplikasi *serverless* yang dapat di-*deploy* di AWS Lambda dan API Gateway. Kamu dapat menggunakan berbagai bahasa pemrograman untuk membuat aplikasi *serverless* menggunakan Apex.
 
@@ -206,7 +204,7 @@ Apex memiliki dukungan terhadap VPC, dan beberapa layanan AWS yang diintegrasika
 * Sistem Operasi: Windows, OSX, Linux, BSD
 * FaaS Service: AWS Lambda
 
-###Serverless Framework
+### Serverless Framework
 
 Framework *serverless* yang dikembangkan oleh Serverless Inc. ini merupakan salah satu *framework* yang sangat populer dikalangan *serverless architecture*.
 
@@ -224,6 +222,6 @@ Saat ini komunitasnya masih terpusah di Amerika Serikat, Eropa, dan Jepang. Dan 
 * Sistem Operasi: Windows, OSX, Linux, BSD
 * FaaS Service: AWS Lambda, Azure Function, Google Cloud Function, IBM OpenWhisk
 
-##Penutup
+## Penutup
 
 Dari berbagai Tools diatas yang telah saya catat, paling banyak bahasa pemrograman yang digunakan untuk *serverless architecture* ini adalah Node.js. Dan Amazon Web Service adalah salah satu layanan yang banyak digemari oleh para pembuat *framework* untuk membangun aplikasi berarsitektur *serverless*.
