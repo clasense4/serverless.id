@@ -8,7 +8,7 @@ paginate = 10
 DisqusShortname = "blog-serverless-id"
 
 [params]
-  # description = ""
+  description = "Komunitas Serverless pertama di Indonesia."
   cover = "images/cover.jpg"
   #logo = "images/logo.png"
   googleAnalyticsUserID = "UA-63909276-4"
