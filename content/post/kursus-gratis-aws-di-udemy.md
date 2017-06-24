@@ -46,7 +46,7 @@ Melihat banyaknya teknologi yang bisa kita kuasai di Amazon Web Service. Tentu k
 
 Berikut ini kamu dapat belajar seputar teknologi AWS melalui beberapa kursus gratis yang tersedia di Udemy.
 
-## 1. Cloud Computing with Amazon Web Service
+### 1. Cloud Computing with Amazon Web Service
 
 Kursus ini merupakan panduan bagi pemula untuk belajar *cloud computing* di Amazon Web Service. Diajarkan oleh Karan Brar dari KB Learning Academy. Memiliki 30 sesi dengan panjang total video selama 3 jam.
 
@@ -68,7 +68,7 @@ Berikut ini adalah daftar isi dari Kursus ini:
 
 Kunjungi kursusnya disini [https://www.udemy.com/cloud-computing-with-amazon-web-services-part-1](https://www.udemy.com/cloud-computing-with-amazon-web-services-part-1)
 
-## 2. AWS Certified Solutions Architect (Associate)
+### 2. AWS Certified Solutions Architect (Associate)
 
 Kursus ini menyediakan bahan belajar untuk lolos sertifikasi AWS Solutions Architect Associate. Kursus ini diajarkan oleh Linux and Cloud Training, Linux Academy.
 
@@ -86,7 +86,7 @@ Lama waktu kursus sekitar 12.5 jam dengan total sesi sebanyak 126 bahan ajar. Be
 
 Kunjungi kursusnya di tautan berikut [https://www.udemy.com/linux-academy-aws-certified-solutions-architect-associate-free](https://www.udemy.com/linux-academy-aws-certified-solutions-architect-associate-free)
 
-## 3. AWS Essentials
+### 3. AWS Essentials
 
 Kursus ini merupakan panduan bagi kamu yang ingin belajar menggunakan Amazon Web Service. Diajarkan oleh Thomas Haslett dari Linux and Cloud Training, Linux Academy. Memiliki 47 sesi dengan panjang total video selama 6 jam.
 
@@ -109,7 +109,7 @@ Berikut adalah daftar isi dari kursus ini:
 
 Kunjungi kursusnya disini [https://www.udemy.com/aws-essentials](https://www.udemy.com/aws-essentials)
 
-## 4. Amazon Web Services - Learning and Implementing AWS Solution
+### 4. Amazon Web Services - Learning and Implementing AWS Solution
 
 Kursus ini merupakan panduan bagi kamu yang ingin menguasai Amazon Web Service untuk digunakan dalam pengembangan aplikasi. Diajarkan oleh Dhruv Baish. Memiliki 16 sesi dengan panjang total video selama 2 jam.
 
@@ -123,7 +123,7 @@ Berikut ini adalah daftar isi dari Kursus ini:
 
 Kunjungi kursusnya disini [https://www.udemy.com/amazon-web-services-aws](https://www.udemy.com/amazon-web-services-aws)
 
-## 5. AWS Developer Associate Training
+### 5. AWS Developer Associate Training
 
 Kursus ini merupakan panduan bagi kamu yang ingin belajar menggunakan Amazon Web Service. Diajarkan oleh Alan Rodrigues. Memiliki 61 sesi dengan panjang total video selama 4.5 jam.
 
@@ -139,7 +139,7 @@ Berikut adalah daftar isi dari kursus ini:
 
 Kunjungi kursusnya disini [https://www.udemy.com/aws-developer-associate-training](https://www.udemy.com/aws-developer-associate-training)
 
-## 6. AWS Concepts
+### 6. AWS Concepts
 
 Kursus ini menyediakan bahan belajar yang sederhana dan konseptual tentang *cloud computing* di Amazon Web Service. Kursus ini diajarkan oleh Thomas Haslett dari Linux and Cloud Training, Linux Academy.
 
@@ -153,7 +153,7 @@ Lama waktu kursus sekitar satu jam dengan total sesi sebanyak 8. Berikut adalah 
 
 Kunjungi kursusnya di tautan berikut [https://www.udemy.com/aws-concepts/](https://www.udemy.com/aws-concepts/)
 
-## 7. Intro to AWS Certified Solutions Architect Associate Exam
+### 7. Intro to AWS Certified Solutions Architect Associate Exam
 
 Kursus ini merupakan panduan bagi kamu yang ingin lolos sertifikasi AWS Certified Solution Architect Associate dalam 30 hari saja. Diajarkan oleh Premraj Jeyaprakash. Memiliki 21 sesi dengan panjang total video selama 1 jam 30 menit.
 
@@ -168,7 +168,7 @@ Berikut ini adalah daftar isi dari Kursus ini:
 
 Kunjungi kursusnya disini [https://www.udemy.com/aws-certified-solutions-architect-associate-in-30-days/](https://www.udemy.com/aws-certified-solutions-architect-associate-in-30-days/)
 
-## 8. Practice Test AWS Certified Solutions Architect Associate
+### 8. Practice Test AWS Certified Solutions Architect Associate
 
 Kursus ini merupakan panduan bagi kamu yang ingin menguji diri sebelum mengikuti sertifikasi  AWS Certified Solution Architect Associate. Diajarkan oleh Chandra Lingam. Memiliki 3 sesi dengan panjang total video selama 1 jam.
 
