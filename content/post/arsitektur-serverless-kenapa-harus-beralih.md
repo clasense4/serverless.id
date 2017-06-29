@@ -30,35 +30,35 @@ Lalu apa sebetulnya serverless itu sendiri? Sudah sangat banyak yang membahas me
 
 Umumnya untuk membuat sebuah sistem, mayoritas menggunakan pola seperti ini :
 
-1. **Web Server + Aplikasi Server dan Database Server dalam satu server**.
+**Web Server + Aplikasi Server dan Database Server dalam satu server**.
 
-    Ini langkah yang sederhana, dan efisien terhadap biaya. Kita bisa memulai dari satu server untuk melihat traffic yang terjadi didalam sistem yang dibangun, selama semua muat dalam satu server, kenapa tidak?
+Ini langkah yang sederhana, dan efisien terhadap biaya. Kita bisa memulai dari satu server untuk melihat traffic yang terjadi didalam sistem yang dibangun, selama semua muat dalam satu server, kenapa tidak?
 
-    "Provision Tools" seperti [Ansible](https://www.ansible.com/how-ansible-works), [Chef](https://www.chef.io/automate/) dan [Puppet](https://puppet.com/product/capabilities/automated-provisioning) dapat menangani deployment seperti ini. Cukup ketik satu baris perintah di command line kita, tunggu, dan sistem siap digunakan. Limitasi pada sistem seperti ini adalah ketika traffic meningkat, imbasnya yaitu pada CPU, Memory dan Storage yang sudah terkunci pada server kita.
+"Provision Tools" seperti [Ansible](https://www.ansible.com/how-ansible-works), [Chef](https://www.chef.io/automate/) dan [Puppet](https://puppet.com/product/capabilities/automated-provisioning) dapat menangani deployment seperti ini. Cukup ketik satu baris perintah di command line kita, tunggu, dan sistem siap digunakan. Limitasi pada sistem seperti ini adalah ketika traffic meningkat, imbasnya yaitu pada CPU, Memory dan Storage yang sudah terkunci pada server kita.
 
-    Jika server yang digunakan adalah server fisik, limitasinya pada jumlah slot CPU, slot Memory, dan slot Storage. Jika server yang digunakan berbasis cloud, cukup dengan sekian klik, server kita semakin kuat untuk menerima traffic. Harus diingat, deployment seperti ini pasti ada downtime ketika melakukan upgrade. Lalu muncul pertanyaan
+Jika server yang digunakan adalah server fisik, limitasinya pada jumlah slot CPU, slot Memory, dan slot Storage. Jika server yang digunakan berbasis cloud, cukup dengan sekian klik, server kita semakin kuat untuk menerima traffic. Harus diingat, deployment seperti ini pasti ada downtime ketika melakukan upgrade. Lalu muncul pertanyaan
 
-    >>> Kalau trafficnya cuma rame waktu weekend, gimana ya?
+>>> Kalau trafficnya cuma rame waktu weekend, gimana ya?
 
-    ![ cpu_utilization.png ](/images/arsitektur-serverless-kenapa-harus-beralih/cpu_utilization.png "CPU Utilization di salah satu startup")
+![ cpu_utilization.png ](/images/arsitektur-serverless-kenapa-harus-beralih/cpu_utilization.png "CPU Utilization di salah satu startup")
 
-2. **Web Server + Aplikasi Server dan Database Server dalam server yang berbeda dan banyak**.
+**Web Server + Aplikasi Server dan Database Server dalam server yang berbeda dan banyak**.
 
-    Ini langkah yang sangat baik. Ketika traffic meningkat, dan yang membutuhkan penanganan lebih lanjut hanya pada sisi Web Server, Web Server bisa kita upgrade atau tambah node, begitu juga jika server Database membutuhkan penanganan, bisa dilakukan scaling dengan menambahkan node untuk replikasi / sharding.
+Ini langkah yang sangat baik. Ketika traffic meningkat, dan yang membutuhkan penanganan lebih lanjut hanya pada sisi Web Server, Web Server bisa kita upgrade atau tambah node, begitu juga jika server Database membutuhkan penanganan, bisa dilakukan scaling dengan menambahkan node untuk replikasi / sharding.
 
-    Deployment jenis ini juga bisa ditangani oleh "Provision Tools" sama seperti diatas. Cukup ketik satu baris perintah di command line kita, tungggu, dan sistem siap digunakan. Atau jika menggunakan service cloud seperti **[AWS Elastic Beanstalk](https://aws.amazon.com/elasticbeanstalk/)** atau **[AWS Opswork](https://aws.amazon.com/opsworks/)**, kita sudah sangat dimudahkan.
+Deployment jenis ini juga bisa ditangani oleh "Provision Tools" sama seperti diatas. Cukup ketik satu baris perintah di command line kita, tungggu, dan sistem siap digunakan. Atau jika menggunakan service cloud seperti **[AWS Elastic Beanstalk](https://aws.amazon.com/elasticbeanstalk/)** atau **[AWS Opswork](https://aws.amazon.com/opsworks/)**, kita sudah sangat dimudahkan.
 
-    Apakah dengan deployment seperti ini bisa menjawab pertanyaan diatas? Saya pikir ini bisa. Lalu mengapa masih menawarkan serverless?
+Apakah dengan deployment seperti ini bisa menjawab pertanyaan diatas? Saya pikir ini bisa. Lalu mengapa masih menawarkan serverless?
 
-    Kita tengok sebuah cerita di suatu tim. Pada suatu waktu tim melihat halaman monitoring, tampak jelas grafik yang sangat menanjak, dan seketika turun dengan curam. Dan di bagian report **http request 500**, naik sangat tajam. Lalu muncul pertanyaan
+Kita tengok sebuah cerita di suatu tim. Pada suatu waktu tim melihat halaman monitoring, tampak jelas grafik yang sangat menanjak, dan seketika turun dengan curam. Dan di bagian report **http request 500**, naik sangat tajam. Lalu muncul pertanyaan
 
-    >>> Server Aplikasi kita ngga kuat, berapa banyak pengunjung yang dibuat kecewa dengan error ini?
+>>> Server Aplikasi kita ngga kuat, berapa banyak pengunjung yang dibuat kecewa dengan error ini?
 
-    Lalu dilakukan meeting dan muncullah sebuah formula, "Kita tambah 1 instance, ketika rata - rata CPU sudah **mencapai 85% selama 5 menit**. Dan kurangi 1 instance ketika rata - rata CPU **sudah 25% selama 5 menit**". Dengan cara ini, kita bisa melakukan antisipasi awal ketika traffic sudah mulai tinggi. Lalu muncul lagi pertanyaan
+Lalu dilakukan meeting dan muncullah sebuah formula, "Kita tambah 1 instance, ketika rata - rata CPU sudah **mencapai 85% selama 5 menit**. Dan kurangi 1 instance ketika rata - rata CPU **sudah 25% selama 5 menit**". Dengan cara ini, kita bisa melakukan antisipasi awal ketika traffic sudah mulai tinggi. Lalu muncul lagi pertanyaan
 
-    >>> Berapa waktu yang dibutuhkan untuk menambah instance baru?
+>>> Berapa waktu yang dibutuhkan untuk menambah instance baru?
 
-    ![ autoscaling_aws.png ](/images/arsitektur-serverless-kenapa-harus-beralih/autoscaling_aws.png "")
+![ autoscaling_aws.png ](/images/arsitektur-serverless-kenapa-harus-beralih/autoscaling_aws.png "")
 
 ### Selamat Datang di Dunia Serverless
 

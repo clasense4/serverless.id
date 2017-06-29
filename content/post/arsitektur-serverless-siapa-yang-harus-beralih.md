@@ -26,7 +26,8 @@ MVP yang dimaksud adalah [Minimun Viable Product](https://en.wikipedia.org/wiki/
 Arsitektur serverless akan sangat memangkas waktu yang dibutuhkan untuk membuat sebuah produk, jika produk yang ditawarkan adalah sebuah aplikasi berbasis web, dengan kombinasi :
 
 - [S3 untuk hosting](http://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html)
-- [AWS Api gateway sebagai REST API](http://docs.aws.amazon.com/apigateway/latest/developerguide/create-api-using-restapi.html), [AWS Lambda sebagai handler Api Gateway](http://docs.aws.amazon.com/lambda/latest/dg/with-on-demand-https-example.html)
+- [AWS Api gateway sebagai REST API](http://docs.aws.amazon.com/apigateway/latest/developerguide/create-api-using-restapi.html)
+- [AWS Lambda sebagai handler Api Gateway](http://docs.aws.amazon.com/lambda/latest/dg/with-on-demand-https-example.html)
 - [AWS DynamoDB sebagai data layer](http://docs.aws.amazon.com/lambda/latest/dg/with-ddb.html)
 - [AWS Route 53 untuk manajemen DNS](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/Welcome.html)
 
@@ -74,35 +75,35 @@ Anda bisa mengikuti langkah yang diambil stackoverflow jika :
 - Sudah mengerti ketika terjadi masalah pada server
 - Sudah melakukan tuning server sampai maksimal
 
-**Lalu, mengapa masih menawarkan arsitektur serverless?**
+### Lalu, mengapa masih menawarkan arsitektur serverless?
 
-1. **Processor dari tahun ke tahun semakin baik dan semakin murah**
+##### Processor dari tahun ke tahun semakin baik dan semakin murah
 
-    ![ processor-by-year.png ](/images/arsitektur-serverless-siapa-yang-harus-beralih/processor-by-year.png "Processor dari 2006 hingga 2013")
+![ processor-by-year.png ](/images/arsitektur-serverless-siapa-yang-harus-beralih/processor-by-year.png "Processor dari 2006 hingga 2013")
 
-    Dengan melihat tabel diatas yang bersumber dari [techspot](http://www.techspot.com/article/1039-ten-years-intel-cpu-compared/), processor dari tahun ke tahun itu semakin baik dan semakin murah. Dengan memiliki $316 pada tahun 2006 kita bisa memiliki high end processor. Namun dengan harga yang tidak berbeda jauh, dengan memiliki $339 pada tahun 2013 kita bisa memiliki high end processor terbaik di tahun tersebut.
+Dengan melihat tabel diatas yang bersumber dari [techspot](http://www.techspot.com/article/1039-ten-years-intel-cpu-compared/), processor dari tahun ke tahun itu semakin baik dan semakin murah. Dengan memiliki $316 pada tahun 2006 kita bisa memiliki high end processor. Namun dengan harga yang tidak berbeda jauh, dengan memiliki $339 pada tahun 2013 kita bisa memiliki high end processor terbaik di tahun tersebut.
 
-    Kita bandingkan dengan processor Server, antara [Intel Xeon E5-2690 Generasi Pertama dengan Generasi Keempat](https://ark.intel.com/compare/91770,64596). Hasil benchmark menunjukkan, [generasi pertama](https://ark.intel.com/products/64596/Intel-Xeon-Processor-E5-2690-20M-Cache-2_90-GHz-8_00-GTs-Intel-QPI) mendapatkan score **503|681**, dan [generasi keempat](https://ark.intel.com/products/91770/Intel-Xeon-Processor-E5-2690-v4-35M-Cache-2_60-GHz) mendapatkan score **943|1300**.
+Kita bandingkan dengan processor Server, antara [Intel Xeon E5-2690 Generasi Pertama dengan Generasi Keempat](https://ark.intel.com/compare/91770,64596). Hasil benchmark menunjukkan, [generasi pertama](https://ark.intel.com/products/64596/Intel-Xeon-Processor-E5-2690-20M-Cache-2_90-GHz-8_00-GTs-Intel-QPI) mendapatkan score **503|681**, dan [generasi keempat](https://ark.intel.com/products/91770/Intel-Xeon-Processor-E5-2690-v4-35M-Cache-2_60-GHz) mendapatkan score **943|1300**.
 
-2. **Effort yang tidak sedikit jika ingin melakukan upgrade server**
+##### Effort yang tidak sedikit jika ingin melakukan upgrade server
 
-    Merujuk pada point nomor 1, dengan melihat processor yang semakin murah tiap tahun, pastinya perusahaan juga ingin melakukan upgrade pada server yang mereka miliki. Dengan biaya yang semakin murah, akan didapatkan "compute power" yang lebih baik. Namun proses upgrade server itu tidak mudah, ada beberapa hal yang harus anda pertimbangkan, diantaranya :
+Merujuk pada point nomor 1, dengan melihat processor yang semakin murah tiap tahun, pastinya perusahaan juga ingin melakukan upgrade pada server yang mereka miliki. Dengan biaya yang semakin murah, akan didapatkan "compute power" yang lebih baik. Namun proses upgrade server itu tidak mudah, ada beberapa hal yang harus anda pertimbangkan, diantaranya :
 
-    - Anda harus memikirkan tentang socket processor, beruntung jika socket masih sama, jika socketnya berbeda?
-    - Processor lama yang Anda miliki, mau dipakai untuk apa?
-    - Jika Processor lama yang Anda miliki ingin dijual saja, berapa banyak jatuhnya?
-    - Jika Socket processor cocok, apakah dengan motherboard yang lama, sistem bisa berjalan dengan maksimal?
-    - Jika Socket processor tidak cocok, berikut juga komponen lainnya tidak cocok, Anda lebih baik **membeli Server baru**
-    - Server lama yang Anda miliki, mau dipakai untuk apa?
-    - Jika Server lama yang Anda miliki ingin dijual saja, berapa banyak jatuhnya?
-    - Jika server lama yang Anda miliki tetap ingin digunakan, Anda harus **membayar biaya maintenance ke Data Center**
+- Anda harus memikirkan tentang socket processor, beruntung jika socket masih sama, jika socketnya berbeda?
+- Processor lama yang Anda miliki, mau dipakai untuk apa?
+- Jika Processor lama yang Anda miliki ingin dijual saja, berapa banyak jatuhnya?
+- Jika Socket processor cocok, apakah dengan motherboard yang lama, sistem bisa berjalan dengan maksimal?
+- Jika Socket processor tidak cocok, berikut juga komponen lainnya tidak cocok, Anda lebih baik **membeli Server baru**
+- Server lama yang Anda miliki, mau dipakai untuk apa?
+- Jika Server lama yang Anda miliki ingin dijual saja, berapa banyak jatuhnya?
+- Jika server lama yang Anda miliki tetap ingin digunakan, Anda harus **membayar biaya maintenance ke Data Center**
 
-3. **Tidak bisa melakukan proses Autoscaling**
+##### Tidak bisa melakukan proses Autoscaling
 
-    Saya rasa point ini cukup jelas. Kalaupun ada sebuah kasus, ambil contoh ecommerce yang melakukan flash sale, effort untuk melewati event ini sangat besar sekali. Sudah adakah provider di Indonesia yang menyediakan sewa server fisik per jam?
+Saya rasa point ini cukup jelas. Kalaupun ada sebuah kasus, ambil contoh ecommerce yang melakukan flash sale, effort untuk melewati event ini sangat besar sekali. Sudah adakah provider di Indonesia yang menyediakan sewa server fisik per jam?
 
 >>> Anda tidak perlu memikirkan hal-hal diatas dengan arsitektur serverless.
 
 ### Kesimpulan
 
->>> Arsitektur Serverless akan mempermudah hidup Kita dan membuat Kita lebih efisien terhadap waktu dengan tidak perlu memikirkan tentang arsitektur atau server.
+>>> Arsitektur Serverless akan mempermudah hidup Kita dan membuat Kita lebih efisien terhadap waktu dengan tidak perlu memikirkan tentang infrastruktur atau server.
