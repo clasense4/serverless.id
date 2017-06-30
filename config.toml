@@ -22,3 +22,9 @@ DisqusShortname = "blog-serverless-id"
   weight = -120
   identifier = "home"
   url = "/"
+
+[[menu.main]]
+  name = "Contact Us"
+  weight = -110
+  identifier = "contact-us"
+  url = "/contact-us"
