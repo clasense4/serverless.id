@@ -10,7 +10,8 @@ date = "2017-06-13T02:24:24+07:00"
 comments = false
 +++
 
-- Beralih ke serverless?
+- Migrasi ke serverless?
+- Migrasi ke AWS?
 - Konsultasi serverless?
 - Konsultasi AWS?
 
