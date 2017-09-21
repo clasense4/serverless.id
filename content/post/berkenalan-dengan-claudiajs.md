@@ -7,7 +7,7 @@ image = ""
 menu = ""
 share = true
 slug = "berkenalan-dengan-Claudiajs"
-tags = ["Claudiajs", "serverless"]
+tags = ["claudiajs", "serverless","serverless-tools"]
 title = "Berkenalan dengan ClaudiaJS"
 
 +++
