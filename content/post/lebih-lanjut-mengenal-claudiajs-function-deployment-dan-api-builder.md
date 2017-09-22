@@ -6,7 +6,7 @@ draft = false
 image = ""
 menu = ""
 share = true
-slug = "function-deployment-dan-api-builder-claudiajs"
+slug = "claudia-function-deployment"
 tags = ["claudiajs", "serverless","serverless-tools"]
 title = "Mengenal fitur ClaudiaJS : Function deployment tools"
 
