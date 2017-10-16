@@ -7,7 +7,7 @@ image = ""
 menu = ""
 share = true
 slug = "contoh-skema-aplikasi-serverless-1-inventory-buku"
-tags = ["azure", "serverless","aws", "nosql]
+tags = ["azure", "serverless","aws", "nosql"]
 title = "Contoh Skema Aplikasi Serverless #1 - Inventory Buku"
 
 +++
