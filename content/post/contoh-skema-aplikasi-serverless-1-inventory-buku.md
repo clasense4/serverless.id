@@ -12,7 +12,7 @@ title = "Contoh Skema Aplikasi Serverless #1 - Inventory Buku"
 
 +++
 
-####Pendahuluan
+#### Pendahuluan
 
 Inventori Buku, ceritanya, adalah sebuah aplikasi yang digunakan untuk mengelola buku yang ada di suatu gudang. Kita dapat mencatat stok buku dan berbagai macam judul buku yang masuk dan keluar di gudang milik kita. Sederhananya, ada beberapa orang admin yang dapat mengelola sirkulasi buku yang ada di gudang.
 
@@ -24,7 +24,7 @@ Pengelola buku pun dapat dibuat oleh akun **superadmin** dengan menyesuaikan pad
 
 Lalu bagaimanakah bila kita ingin mengimplementasikannya diatas arsitektur *serverless*?
 
-####Contoh arsitektur diatas Amazon Web Service
+#### Contoh arsitektur diatas Amazon Web Service
 
 Bila kita ingin membangunnya diatas Amazon Web Service, beberapa layanan yang diperlukan antara lain adalah sebagai berikut:
 
@@ -45,7 +45,7 @@ Namun AWS Lambda tidak dapat digunakan langsung oleh aplikasi *web* kita yang di
 
 ![ img-1.png ](/images/contoh-skema-aplikasi-serverless-1-inventory-buku/img-1.png "serverless architecture example on aws") 
 
-####Contoh arsitektur diatas Azure
+#### Contoh arsitektur diatas Azure
 
 Hampir mirip dengan versi AWS, hanya ada beberapa perbedaan dalam layanan Azure yang dipilih. Di Azure kita dapat menggunakan:
 
