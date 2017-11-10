@@ -53,7 +53,7 @@ Karena ada juga pihak pemerintah yang ingin melihat perkembangan masalah infrast
 
 Secara periodik dengan rentang per jam, Cloudwatch akan menjalan Lambda dan mengekstrak data - data dari DynamoDB ke AWS Elasticsearch. Dan jajaran pemerintah tingkat atas yang terkait dapat melihat infografiknya melalui Kibana yang sudah memuat berbagai laporan warga dan *insight* yang telah dibuat oleh tim *Business Intelligence*.
 
-![ img-1.png ](/images/contoh-skema-aplikasi-serverless-1-inventory-buku/img-1.png "serverless architecture example on aws") 
+![ img-1.png ](/images/contoh-skema-aplikasi-serverless-2-laporan-warga/img-1.png "serverless architecture example on aws") 
 
 #### Contoh arsitektur diatas Azure
 
@@ -67,4 +67,4 @@ Hampir mirip dengan versi AWS, hanya ada beberapa perbedaan dalam layanan Azure 
 * Azure Notification Hub, layanan Azure yang dapat memberikan notifikasi ke sebuah *mobile device* mulai dari *push notification*, SMS, dan *email*.
 * Web Scheduler, layanan Azure yang dapat mengatur penjadwalan untuk *script* yang akan kita jadwalkan.
 
-![ img-2.png ](/images/contoh-skema-aplikasi-serverless-1-inventory-buku/img-2.png "serverless architecture example on azure") 
+![ img-2.png ](/images/contoh-skema-aplikasi-serverless-2-laporan-warga/img-2.png "serverless architecture example on azure") 
