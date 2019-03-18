@@ -1,7 +1,7 @@
 languageCode = "en-us"
 title = "Serverless Indonesia"
 baseurl = "https://blog.serverless.id/"
-Copyright = "All rights reserved - 2017"
+Copyright = "All rights reserved - 2019"
 canonifyurls = true
 theme = "casper"
 paginate = 10
@@ -11,7 +11,7 @@ DisqusShortname = "blog-serverless-id"
   description = "Komunitas Serverless pertama di Indonesia."
   cover = "images/cover.jpg"
   #logo = "images/logo.png"
-  googleAnalyticsUserID = "UA-63909276-4"
+  #googleAnalyticsUserID = "UA-63909276-4"
   # Optional RSS-Link, if not provided it defaults to the standard index.xml
   # RSSLink = "http://feeds.feedburner.com/..."
   # set true if you are not proud of using Hugo (true will hide the footer note "Proudly published with HUGO.....")
