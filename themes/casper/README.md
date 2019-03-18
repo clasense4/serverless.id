@@ -19,6 +19,7 @@ blog source : https://github.com/vjeantet/vjeantet.fr
 * Tagging
 * Pagination
 * Menu
+* Syntax Highlighting
 
 # Theme usage and asumptions
 * All blog posts are in the ```post``` folder (```content/post```)
@@ -50,12 +51,13 @@ Copyright = "All rights reserved - 2015"
 canonifyurls = true
 
 [params]
-  description = "this is my description"
+  description = "Welcome to my website"
+  metadescription = "Used as 'description' meta tag for both home and index pages. If not set, 'description' will be used instead"
   cover = "images/cover.jpg"
   author = "Valère JEANTET"
   authorlocation = "Paris, France"
   authorwebsite = "http://vjeantet.fr"
-  bio= "my bio"
+  authorbio= "my bio"
   logo = "images/logo.png"
   googleAnalyticsUserID = "UA-79101-12"
   # Optional RSS-Link, if not provided it defaults to the standard index.xml
@@ -63,9 +65,23 @@ canonifyurls = true
   githubName = "vjeantet"
   twitterName = "vjeantet"
   # facebookName = ""
+  # codepenName = ""
   # linkedinName = ""
+  # stackoverflowId = ""
+  # keybaseName = ""
+  # flickrName = ""
+  # instagramName = ""
+  # email = ""
+  # pinterestName = ""
+  # googlePlusName = ""
   # set true if you are not proud of using Hugo (true will hide the footer note "Proudly published with HUGO.....")
   hideHUGOSupport = false
+  
+  # Setting a value will load highlight.js and enable syntax highlighting using the style selected.
+  # See https://github.com/isagalaev/highlight.js/tree/master/src/styles for available styles
+  # A preview of above styles can be viewed at https://highlightjs.org/static/demo/
+  hjsStyle = "default"
+
   [params.social]
     twitter = "your_twitter"
 
@@ -73,32 +89,24 @@ canonifyurls = true
 
 Example : [config.toml](https://github.com/vjeantet/vjeantet.fr/blob/master/config.toml)
 
-## Multiple authors configuration
+## Overide author information per page
 
-In addition to providing data for a single author as shown in the example above, multiple authors
-can be configured via data/authors/\*.(yml, toml, json) entries. If the key provided in
-.Site.Params.author matched a data/authors/\* entry, it will be used as the default. Overrides
-per page can be done by a simple author = other_author_key entry in the front matter. For those
-pages where you want to omit the author block completely, a .Params.noauthor entry is also
+In addition to providing data for a single author as shown in the example above, author can be overided per page. If a author key  in page's frontmatter exists it will be used instead of the default one. 
+Overrides per page can be done by adding author* = "value entry in the front matter. 
+For those pages where you want to omit the author block completely, a .Params.noauthor entry is also
 available.
 
-Example author definition file:
-
-``` yml
-name: John Doe
-bio: The most uninteresting man in the world.
-location: Normal, IL
-website: http://example.com
-thumbnail: images/john.png
-
-```
 
 Example override author per page file:
 ``` toml
 +++
-author = ""
 date = "2014-07-11T10:54:24+02:00"
 title = ""
+author = "NickName"
+authoravatar = "https://cdn4.iconfinder.com/data/icons/gray-user-management/512/rounded-512.png"
+authorbio = "IT software and Security Engineer, Open source enthusiast."
+authorlocation = "Paris, France"
+authorwebsite = "http://vjeantet.fr"
 ...
 +++
 
@@ -150,12 +158,6 @@ menu = ""           # set "main" to add this content to the main menu
 +++
 
 Contents here
-```
-
-## Create new content based with default metadata from this theme
-You can easyly create a new content with all metadatas used by this theme, using this command
-```
-hugo new -t casper post/my-post.md
 ```
 
 # Contact me
