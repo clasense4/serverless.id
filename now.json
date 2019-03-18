@@ -1,7 +1,7 @@
 {
   "version": 2,
   "name": "blog-serverless-id",
-  "alias": "blog.serverless.now.sh",
+  "alias": ["blog-serverless-id.now.sh","blog.serverless.id"],
   "builds": [
     {
       "src": "build.sh",
