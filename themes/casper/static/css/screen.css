@@ -1012,7 +1012,7 @@ body.nav-opened .menu-button .word {
 /* Add a little circle in the middle of the border-bottom on our .post
    just for the lolz and stylepoints. */
 .post:after {
-    display: block;
+    display: none;
     content: "";
     width: 7px;
     height: 7px;
