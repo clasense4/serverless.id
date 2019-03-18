@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "name": "blog-serverless-id",
+  "builds": [
+    {
+      "src": "build.sh",
+      "use": "@now/static-build",
+      "config": { "distDir": "public" }
+    }
+  ]
+}
